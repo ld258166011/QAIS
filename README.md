@@ -6,11 +6,11 @@ QAIS consists of a keystroke replayer based on PyAutoGUI, browser automation wit
 
 ## Installation
 
-1. Download and install the right version of WebDriver for your browser.
+1. Download and install the right version of WebDriver for your browser:
 
-* [ChromeDriver](https://chromedriver.chromium.org/downloads) for Google Chrome
-* [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) for Mozilla Firefox
-* [WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) for Microsoft Edge
+	* [ChromeDriver](https://chromedriver.chromium.org/downloads) for Google Chrome
+	* [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) for Mozilla Firefox
+	* [WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) for Microsoft Edge
 
 2. Use pip with Python 3.x to install the QAIS package:
 
@@ -61,10 +61,10 @@ qais website query
 qais Google "the lazy dog"
 ```
 
-2. Search for the Chinese query "大黄蜂" in Baidu:
+2. Search for the Chinese query "大黄蜂" in Baidu and save the traffic as `sample.pcap`:
 
 ```sh
-qais Baidu 大黄蜂 --chinese
+qais Baidu 大黄蜂 --chinese -f sample.pcap
 ```
 
 
