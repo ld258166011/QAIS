@@ -55,13 +55,13 @@ qais website query
 
 ## Examples
 
-1. Search for the English query "the lazy dog" in Google:
+1. Search for the English query `the lazy dog` in Google:
 
 ```sh
 qais Google "the lazy dog"
 ```
 
-2. Search for the Chinese query "大黄蜂" in Baidu and save the traffic as `sample.pcap`:
+2. Search for the Chinese query `大黄蜂` in Baidu and save the traffic as `sample.pcap`:
 
 ```sh
 qais Baidu 大黄蜂 --chinese -f sample.pcap
