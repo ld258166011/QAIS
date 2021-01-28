@@ -15,7 +15,7 @@ QAIS consists of a keystroke replayer based on PyAutoGUI, browser automation wit
 2. Use pip with Python 3.x to install the QAIS package:
 
 ```sh
-pip install https://github.com/ld258166011/QAIS/archive/main.zip
+> pip install https://github.com/ld258166011/QAIS/archive/main.zip
 ```
 
 
@@ -49,7 +49,7 @@ optional arguments:
 Use the following command to run QAIS with default optional arguments:
 
 ```sh
-qais website query
+> qais website query
 ```
 
 
@@ -58,13 +58,13 @@ qais website query
 1. Search for the English query `the lazy dog` in Google:
 
 ```sh
-qais Google "the lazy dog"
+> qais Google "the lazy dog"
 ```
 
 2. Search for the Chinese query `大黄蜂` in Baidu and save the traffic as `sample.pcap`:
 
 ```sh
-qais Baidu 大黄蜂 --chinese -f sample.pcap
+> qais Baidu 大黄蜂 --chinese -f sample.pcap
 ```
 
 
