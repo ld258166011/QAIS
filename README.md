@@ -25,7 +25,7 @@ The QAIS python package provides a command `qais` to perform the automation and 
 
 ```
 usage: qais [-h] [--chinese] [--bigrams PATH] [--broswer NAME] [--click]
-            [-f FILE]
+            [-i IFACE] [-f FILE]
             website query
 
 Query Automation in Incremental Search
@@ -43,6 +43,7 @@ optional arguments:
   --broswer NAME  currently support Chrome, Firefox, and Edge, default is
                   Chrome.
   --click         click the search box once before entering the query.
+  -i IFACE        the interface to capture the packets on.
   -f FILE         filename of the captured traffic, default is pkts.pcap.
 ```
 
@@ -55,16 +56,15 @@ Use the following command to run QAIS with default optional arguments:
 
 ## Examples
 
-1. Search for the English query `the lazy dog` in Google:
+1. Search for the English query `apple bee restaurant` in Google:
 
 ```
-> qais Google "the lazy dog"
+> qais Google "apple bee restaurant"
 ```
 
-2. Search for the Chinese query `大黄蜂` in Baidu and save the traffic as `sample.pcap`:
-
+2. Search for the Chinese query `拼音输入法` in Baidu. Capture the packets on `eth0` and save the traffic as `sample.pcap`.
 ```
-> qais Baidu 大黄蜂 --chinese -f sample.pcap
+> qais Baidu 拼音输入法 --chinese -i eth0 -f sample.pcap
 ```
 
 
