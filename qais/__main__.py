@@ -17,6 +17,8 @@ def main():
                         help='currently support Chrome, Firefox, and Edge, default is Chrome.')
     parser.add_argument('--click', dest='click', action='store_true',
                         help='click the search box once before entering the query.')
+    parser.add_argument('-i', type=str, metavar='IFACE', dest='iface', default=None,
+                        help='the interface to capture the packets on.')
     parser.add_argument('-f', type=str, metavar='FILE', dest='fname', default='./pkts.pcap',
                         help='filename of the captured traffic, default is pkts.pcap.')
 

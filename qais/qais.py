@@ -9,7 +9,7 @@ except:
     from .sniffer import Sniffer
 
 
-def QAIS(website, query, chinese, bigrams, broswer, click, fname):
+def QAIS(website, query, chinese, bigrams, broswer, click, iface, fname):
     '''
     Query Automation in Incremental Search.
     '''
@@ -23,7 +23,7 @@ def QAIS(website, query, chinese, bigrams, broswer, click, fname):
     sniffer = Sniffer()
 
     # Start capture process
-    sniffer.start(fname)
+    sniffer.start(iface, fname)
 
     # Open broswer
     auto.open_broswer(broswer)
@@ -61,4 +61,4 @@ def QAIS(website, query, chinese, bigrams, broswer, click, fname):
     auto.close_broswer()
 
     # Stop capture process
-    sniffer.stop()
+    sniffer.stop(iface)
