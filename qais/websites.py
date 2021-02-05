@@ -1,5 +1,6 @@
 
 AUTOMATION_PARAMS = {
+#    Website                Domain Name          Search Box                    Click
     'google':    {'base': ['www.google.com',    '//*[@name="q"]',              False]},
     'tmall':     {'base': ['www.tmall.com',     '//*[@title="请输入搜索文字"]', False]},
     'facebook':  {'base': ['www.facebook.com',  '//*[@type="search"]',         True], 'login': ['USERNAME', 'PASSWORD']},
