@@ -75,33 +75,33 @@ class Automator:
                         raise Exception('Please switch to English keyboard')
 
 
-    def open_broswer(self, broswer):
+    def open_browser(self, browser):
         '''
-        Open broswer with no notifications.
+        Open browser with no notifications.
         '''
-        if broswer.lower() == 'chrome':
+        if browser.lower() == 'chrome':
             options = webdriver.ChromeOptions()
             options.add_argument('--disable-quic')
             options.add_argument('--no-sandbox')
             options.add_experimental_option("excludeSwitches", ["enable-logging"])
             options.add_experimental_option("prefs", {"profile.default_content_setting_values.notifications": 1})
             self.driver = webdriver.Chrome(chrome_options = options)
-        elif broswer.lower() == 'firefox':
+        elif browser.lower() == 'firefox':
             options = webdriver.FirefoxOptions()
             options.set_preference("dom.push.enabled", False)
             self.driver = webdriver.Firefox(firefox_options = options)
-        elif broswer.lower() == 'edge':
+        elif browser.lower() == 'edge':
             options = EdgeOptions()
             options.set_capability("dom.push.enabled", False)
             self.driver = webdriver.Edge(capabilities=options.to_capabilities())
         else:
-            raise Exception('Broswer not supported')
+            raise Exception('browser not supported')
         self.driver.maximize_window()
 
 
     def get_website(self, url):
         '''
-        Get website in broswer.
+        Get website in browser.
         '''
         self.driver.get(url)
         time.sleep(1)
@@ -176,8 +176,8 @@ class Automator:
         time.sleep(1)
 
 
-    def close_broswer(self):
+    def close_browser(self):
         '''
-        Close broswer.
+        Close browser.
         '''
         self.driver.quit()

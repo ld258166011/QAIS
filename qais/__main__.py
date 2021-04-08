@@ -13,7 +13,7 @@ def main():
                         help='Chinese query entered using Pinyin IME.')
     parser.add_argument('--bigrams', type=str, metavar='PATH', default=None,
                         help='filename of the bigram timing model (csv format).')
-    parser.add_argument('--broswer', type=str, metavar='NAME', default='chrome',
+    parser.add_argument('--browser', type=str, metavar='NAME', default='chrome',
                         help='currently support Chrome, Firefox, and Edge, default is Chrome.')
     parser.add_argument('--click', dest='click', action='store_true',
                         help='click the search box once before entering the query.')
